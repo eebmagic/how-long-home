@@ -1,0 +1,15 @@
+{
+  "name": "how-long-home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "life360-node-api": "^0.0.10",
+    "nodemailer": "^6.7.3"
+  }
+}
