@@ -33,21 +33,15 @@ life360.login(username, password).then(client => {
                     const durrMins = durr / 60000;
                     const durrHours = durrMins / 60;
 
-                    // console.log(m.location);
-                    // console.log(start);
-                    // console.log(current);
-                    // console.log(durrHours);
-                    // console.log(m.firstName);
-                    // console.log(m.location.isDriving);
-                    // console.log(m.location.speed);
-                    // console.log(`${lat}, ${long}\n`)
-                    const message = `You've been home for ${durrHours.toFixed(2)} hours`;
+                    const timeString = durrHours.toFixed(2);
+                    const message = `You've been home for ${timeString} hours`;
+                    const header = `Been Home: ${timeString} hours`
                     console.log(message);
 
                     var mailOptions = {
                       from: 'youremail@gmail.com',
                       to: 'eebmagic@gmail.com',
-                      subject: 'How long home',
+                      subject: header,
                       text: message
                     };
 
@@ -63,6 +57,3 @@ life360.login(username, password).then(client => {
         });
     });
 });
-
-
-
